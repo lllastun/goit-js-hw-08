@@ -26,9 +26,10 @@ const throttleTimeUpdate = throttle(timeUpdate, 1000);
 
 player.on('timeupdate', throttleTimeUpdate);
 
-player.getVideoTitle().then(function (title) {
-  console.log('title:', title);
-});
+
+// player.getVideoTitle().then(function (title) {
+//   console.log('title:', title);
+// });
 
 player.setCurrentTime(localStorage.getItem('videoplayer-current-time'))
  
