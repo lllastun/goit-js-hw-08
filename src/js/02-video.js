@@ -26,14 +26,8 @@ const throttleTimeUpdate = throttle(timeUpdate, 1000);
 
 player.on('timeupdate', throttleTimeUpdate);
 
+player.setCurrentTime(localStorage.getItem('videoplayer-current-time'));
 
-// player.getVideoTitle().then(function (title) {
-//   console.log('title:', title);
-// });
-
-player.setCurrentTime(localStorage.getItem('videoplayer-current-time'))
- 
-    if (JSON.parse(localStorage.getItem('videoplayer-isPlayed'))) {
-      player.play();
-    }
-
+if (JSON.parse(localStorage.getItem('videoplayer-isPlayed'))) {
+  player.play();
+}
